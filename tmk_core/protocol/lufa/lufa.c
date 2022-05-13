@@ -161,7 +161,9 @@ void raw_hid_send(uint8_t *data, uint8_t length) {
     // Check to see if the host is ready to accept another packet
     if (Endpoint_IsINReady()) {
         // Write data
-        Endpoint_Write_Stream_LE(data, RAW_EPSIZE, NULL);
+        if(Endpoint_Write_Stream_LE(data, RAW_EPSIZE, NULL)) {
+          rawhid_state.connected = false;
+        }
         // Finalize the stream transfer to send the last packet
         Endpoint_ClearIN();
     }

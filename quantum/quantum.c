@@ -401,11 +401,7 @@ __attribute__((weak)) bool webusb_receive_user(uint8_t *data, uint8_t length) { 
 __attribute__((weak)) bool webusb_receive_kb(uint8_t *data, uint8_t length) { return webusb_receive_user(data, length); }
 
 bool webusb_receive_quantum(uint8_t *data, uint8_t length) {
-#    ifdef ORYX_ENABLE
-    return webusb_receive_oryx(data, length);
-#    else
     return webusb_receive_kb(data, length);
-#    endif
 }
 #endif
 

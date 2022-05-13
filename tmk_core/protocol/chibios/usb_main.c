@@ -49,6 +49,14 @@
 extern keymap_config_t keymap_config;
 #endif
 
+#ifdef RAW_ENABLE
+#    include "raw_hid.h"
+#endif
+
+#ifdef ORYX_ENABLE
+#    include "oryx.h"
+#endif
+
 #ifdef WEBUSB_ENABLE
 #    include "webusb.h"
 #endif
@@ -1141,7 +1149,15 @@ void raw_hid_send(uint8_t *data, uint8_t length) {
     if (length != RAW_EPSIZE) {
         return;
     }
+
+#ifdef ORYX_ENABLE
+    if(chnWriteTimeout(&drivers.raw_driver.driver, data, length, TIME_IMMEDIATE) != length){
+        rawhid_state.pairing = false;
+        rawhid_state.paired = false;
+    }
+#else
     chnWrite(&drivers.raw_driver.driver, data, length);
+#endif
 }
 
 __attribute__((weak)) void raw_hid_receive(uint8_t *data, uint8_t length) {
