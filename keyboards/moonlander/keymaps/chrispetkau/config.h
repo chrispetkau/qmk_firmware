@@ -4,6 +4,6 @@
 */
 #define ORYX_CONFIGURATOR
 #define USB_SUSPEND_WAKEUP_DELAY 0
-#define FIRMWARE_VERSION u8"rlXzn/lxWQw"
+#define FIRMWARE_VERSION u8"rlXzn/6ZKlL" // This synchs the firmware to Oryx.
 #define RGB_MATRIX_STARTUP_SPD 60
 #define TAPPING_TERM_PER_KEY
