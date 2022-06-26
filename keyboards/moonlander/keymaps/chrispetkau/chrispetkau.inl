@@ -8,16 +8,6 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record)
   // doesn't persist after tapping.
   case SFT_T(KC_MINS):
   case SFT_T(KC_QUOTE):
-  case SFT_T(KC_1):
-  case SFT_T(KC_2):
-  case SFT_T(KC_3):
-  case SFT_T(KC_4):
-  case SFT_T(KC_5):
-  case SFT_T(KC_6):
-  case SFT_T(KC_7):
-  case SFT_T(KC_8):
-  case SFT_T(KC_9):
-  case SFT_T(KC_0):
     return 0;
   default:
     return TAPPING_TERM;
