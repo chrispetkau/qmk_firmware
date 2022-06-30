@@ -149,7 +149,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_NULLPTR, KC_TRANSPARENT),
 };
 
-extern bool g_suspend_state;
 extern rgb_config_t rgb_matrix_config;
 
 void keyboard_post_init_user(void)
@@ -196,7 +195,7 @@ void set_layer_color(int layer)
 
 void rgb_matrix_indicators_user(void)
 {
-    if (g_suspend_state || keyboard_config.disable_layer_led)
+    if (keyboard_config.disable_layer_led)
     {
         return;
     }
@@ -758,7 +757,7 @@ void dance_8_finished(qk_tap_dance_state_t *state, void *user_data)
         register_code16(KC_G);
         break;
     case SINGLE_HOLD:
-        register_code16(LALT(KC_G));
+        register_code16(KC_F12);
         break;
     case DOUBLE_TAP:
         register_code16(KC_G);
@@ -779,7 +778,7 @@ void dance_8_reset(qk_tap_dance_state_t *state, void *user_data)
         unregister_code16(KC_G);
         break;
     case SINGLE_HOLD:
-        unregister_code16(LALT(KC_G));
+        unregister_code16(KC_F12);
         break;
     case DOUBLE_TAP:
         unregister_code16(KC_G);
