@@ -125,12 +125,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
       SEND_STRING(SS_TAP(X_S) PETKAU_DELAY SS_TAP(X_T) PETKAU_DELAY SS_TAP(X_A) PETKAU_DELAY SS_TAP(X_T) PETKAU_DELAY SS_TAP(X_I) PETKAU_DELAY SS_TAP(X_C));
     }
     break;
-  case ST_MACRO_ENUM:
-    if (record->event.pressed)
-    {
-      SEND_STRING(SS_TAP(X_E) PETKAU_DELAY SS_TAP(X_N) PETKAU_DELAY SS_TAP(X_U) PETKAU_DELAY SS_TAP(X_M));
-    }
-    break;
+  // case ST_MACRO_ENUM:
+  //   if (record->event.pressed)
+  //   {
+  //     SEND_STRING(SS_TAP(X_E) PETKAU_DELAY SS_TAP(X_N) PETKAU_DELAY SS_TAP(X_U) PETKAU_DELAY SS_TAP(X_M));
+  //   }
+  //   break;
   case ST_MACRO_CLASS:
     if (record->event.pressed)
     {
