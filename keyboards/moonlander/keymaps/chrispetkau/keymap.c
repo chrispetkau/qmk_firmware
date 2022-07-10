@@ -48,40 +48,7 @@
 #define SE_SECT_MAC ALGR(KC_6)
 #define MOON_LED_LEVEL LED_LEVEL
 
-enum custom_keycodes
-{
-    RGB_SLD = ML_SAFE_RANGE,
-    ST_MACRO_VOID,
-    ST_MACRO_BREAK,
-    ST_MACRO_NOT_EQUAL,
-    ST_MACRO_EQUALS_ARROW,
-    ST_MACRO_DASH_ARROW,
-    ST_MACRO_RETURN,
-    ST_MACRO_BOOL,
-    ST_MACRO_FALSE,
-    ST_MACRO_TRUE,
-    ST_MACRO_NULLPTR,
-    ST_MACRO_CONTINUE,
-    ST_MACRO_VIRTUAL,
-    ST_MACRO_OVERRIDE,
-    ST_MACRO_STATIC,
-    ST_MACRO_ENUM,
-    ST_MACRO_CLASS,
-    ST_MACRO_STRUCT,
-    ST_MACRO_NAMESPACE,
-    ST_MACRO_INCLUDE,
-    ST_MACRO_DEFINE,
-    ST_MACRO_IFDEF,
-    ST_MACRO_ELSE,
-    ST_MACRO_ENDIF,
-    ST_MACRO_PUBLIC,
-    ST_MACRO_PRIVATE,
-    ST_MACRO_TEMPLATE,
-    ST_MACRO_TYPENAME,
-    ST_MACRO_AUTO,
-    ST_MACRO_WHILE,
-    ST_MACRO_REINTERPRET_CAST
-};
+#include "petkau_macro.inl"
 
 enum tap_dance_codes
 {
@@ -268,4 +235,3 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record)
 }
 
 #include "petkau_tap_dance.inl"
-#include "petkau_macro.inl"
