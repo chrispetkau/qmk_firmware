@@ -173,12 +173,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     PETKAU_MACRO_Auto,    PETKAU_MACRO_While,    LSFT(KC_TAB),                   LSFT(KC_TAB),   PETKAU_MACRO_Override,    PETKAU_MACRO_Return
   ),
   [5] = LAYOUT_moonlander(
-    KC_TILD,        KC_EXLM,        KC_AT,          KC_HASH,        KC_DLR,         KC_PERC,        PETKAU_MACRO_Bool,                                    KC_TRANSPARENT, KC_CIRC,        KC_AMPR,        KC_ASTR,        PETKAU_MACRO_True,    PETKAU_MACRO_False,    KC_QUOTE,       
-    KC_LCBR,        RSFT(KC_Q),     RSFT(KC_W),     RSFT(KC_F),     RSFT(KC_P),     RSFT(KC_B),     PETKAU_MACRO_Continue,                                    KC_TRANSPARENT, RSFT(KC_J),     RSFT(KC_L),     RSFT(KC_U),     RSFT(KC_Y),     KC_COLN,        KC_RCBR,        
+    KC_TILD,        KC_EXLM,        KC_AT,          KC_HASH,        KC_DLR,         KC_PERC,        PETKAU_MACRO_Bool,                                    PETKAU_MACRO_Public,    KC_CIRC,        KC_AMPR,        KC_ASTR,        PETKAU_MACRO_True,    PETKAU_MACRO_False,    KC_QUOTE,       
+    KC_LCBR,        RSFT(KC_Q),     RSFT(KC_W),     RSFT(KC_F),     RSFT(KC_P),     RSFT(KC_B),     PETKAU_MACRO_Continue,                                    PETKAU_MACRO_Private,    RSFT(KC_J),     RSFT(KC_L),     RSFT(KC_U),     RSFT(KC_Y),     KC_COLN,        KC_RCBR,        
     KC_PLUS,        RSFT(KC_A),     RSFT(KC_R),     RSFT(KC_S),     RSFT(KC_T),     RSFT(KC_G),     KC_TRANSPARENT,                                                                 KC_CAPSLOCK,    RSFT(KC_M),     KC_TRANSPARENT, RSFT(KC_E),     RSFT(KC_I),     RSFT(KC_O),     KC_MINUS,       
-    KC_LABK,        RSFT(KC_Z),     RSFT(KC_X),     RSFT(KC_C),     RSFT(KC_D),     RSFT(KC_V),                                     RSFT(KC_K),     RSFT(KC_H),     KC_PIPE,        KC_TRANSPARENT, KC_QUES,        KC_RABK,        
+    KC_LABK,        RSFT(KC_Z),     RSFT(KC_X),     RSFT(KC_C),     RSFT(KC_D),     RSFT(KC_V),                                     RSFT(KC_K),     RSFT(KC_H),     KC_PIPE,        PETKAU_MACRO_DashArrow,    KC_QUES,        KC_RABK,        
     PETKAU_MACRO_ReinterpretCast,    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, PETKAU_MACRO_NullPtr,    KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, RSFT(KC_TAB),                   RSFT(KC_TAB),   KC_TRANSPARENT, PETKAU_MACRO_Return
+    PETKAU_MACRO_Auto,    PETKAU_MACRO_While,    RSFT(KC_TAB),                   RSFT(KC_TAB),   PETKAU_MACRO_Override,    PETKAU_MACRO_Return
   ),
 };
 
