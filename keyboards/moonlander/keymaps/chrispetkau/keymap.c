@@ -176,8 +176,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LCBR,        RSFT(KC_Q),     RSFT(KC_W),     RSFT(KC_F),     RSFT(KC_P),     RSFT(KC_B),     PETKAU_MACRO_Continue,                                    KC_TRANSPARENT, RSFT(KC_J),     RSFT(KC_L),     RSFT(KC_U),     RSFT(KC_Y),     KC_COLN,        KC_RCBR,        
     KC_PLUS,        RSFT(KC_A),     RSFT(KC_R),     RSFT(KC_S),     RSFT(KC_T),     RSFT(KC_G),     KC_TRANSPARENT,                                                                 KC_CAPSLOCK,    RSFT(KC_M),     KC_TRANSPARENT, RSFT(KC_E),     RSFT(KC_I),     RSFT(KC_O),     KC_MINUS,       
     KC_LABK,        RSFT(KC_Z),     RSFT(KC_X),     RSFT(KC_C),     RSFT(KC_D),     RSFT(KC_V),                                     RSFT(KC_K),     RSFT(KC_H),     KC_PIPE,        KC_TRANSPARENT, KC_QUES,        KC_RABK,        
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, PETKAU_MACRO_NullPtr,    KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, RSFT(KC_TAB),                   RSFT(KC_TAB),   KC_TRANSPARENT, KC_TRANSPARENT
+    PETKAU_MACRO_ReinterpretCast,    KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, PETKAU_MACRO_NullPtr,    KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_TRANSPARENT, RSFT(KC_TAB),                   RSFT(KC_TAB),   KC_TRANSPARENT, PETKAU_MACRO_Return
   ),
 };
 
