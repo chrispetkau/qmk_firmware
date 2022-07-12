@@ -128,6 +128,7 @@ enum {
     MORE_TAPS
 };
 
+#include "petkau_tapping_term.inl"
 #include "petkau_tap_dance.inl"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
