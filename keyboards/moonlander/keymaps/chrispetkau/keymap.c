@@ -138,12 +138,22 @@ enum custom_keycodes
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    
+    case ST_MACRO_6:
+    if (record->event.pressed) {
+      SEND_STRING(SS_LCTL(SS_TAP(X_K)) SS_DELAY(100) SS_LCTL(SS_TAP(X_0)));
+
+    }
+    break;
+    case ST_MACRO_7:
+    if (record->event.pressed) {
+      SEND_STRING(SS_RCTL(SS_TAP(X_K)) SS_DELAY(100) SS_RCTL(SS_TAP(X_J)));
+
+    }
+    break;
     default: return process_record_petkau(keycode, record);
   }
   return true;
 }
-
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
