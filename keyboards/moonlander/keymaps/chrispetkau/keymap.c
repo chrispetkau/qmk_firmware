@@ -130,6 +130,7 @@ enum {
 
 #include "petkau_tapping_term.inl"
 #include "petkau_tap_dance.inl"
+
 enum custom_keycodes
 {
 	ST_MACRO_6,
