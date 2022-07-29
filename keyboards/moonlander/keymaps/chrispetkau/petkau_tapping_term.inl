@@ -12,7 +12,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record)
   // Reduce the tapping term on the hold-for-Shift-proxy layers.
   case KC_T:
   case KC_N:
-    return 0;
+    return 150;
   default:
     return TAPPING_TERM;
   }
