@@ -8,7 +8,7 @@
 #define TAPPING_TERM 150
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
-#define FIRMWARE_VERSION u8"rlXzn/Llvay"
+#define FIRMWARE_VERSION u8"rlXzn/q7mz4"
 #define RAW_USAGE_PAGE 0xFF60
 #define RAW_USAGE_ID 0x61
 #define RGB_MATRIX_STARTUP_SPD 60
