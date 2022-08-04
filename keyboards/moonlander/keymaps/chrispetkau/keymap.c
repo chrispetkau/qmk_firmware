@@ -65,8 +65,6 @@ const uint8_t PROGMEM ledmap[][DRIVER_LED_TOTAL][3] = {
 
     [4] = { {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204} },
 
-    [5] = { {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204}, {139,36,204} },
-
 };
 
 void set_layer_color(int layer) {
@@ -103,9 +101,6 @@ void rgb_matrix_indicators_user(void) {
       break;
     case 4:
       set_layer_color(4);
-      break;
-    case 5:
-      set_layer_color(5);
       break;
    default:
     if (rgb_matrix_get_flags() == LED_FLAG_NONE)
@@ -178,14 +173,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LABK,        LSFT(KC_Z),     LSFT(KC_X),     LSFT(KC_C),     LSFT(KC_D),     LSFT(KC_V),                                     LSFT(KC_K),     LSFT(KC_H),     KC_PIPE,        PETKAU_MACRO_DashArrow,    KC_QUES,        KC_RABK,        
     PETKAU_MACRO_ReinterpretCast,     PETKAU_MACRO_Struct,    PETKAU_MACRO_Class,    PETKAU_MACRO_Namespace,    KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, LSFT(KC_DELETE),PETKAU_MACRO_Define,    PETKAU_MACRO_IfDef,    PETKAU_MACRO_Else,    PETKAU_MACRO_EndIf,    
     PETKAU_MACRO_Auto,    PETKAU_MACRO_NullPtr,    LSFT(KC_TAB),                   LSFT(KC_TAB),   PETKAU_MACRO_Override,    PETKAU_MACRO_Return
-  ),
-  [5] = LAYOUT_moonlander(
-    KC_TILD,        KC_EXLM,        KC_AT,          KC_HASH,        KC_DLR,         KC_PERC,        PETKAU_MACRO_Bool,                                    PETKAU_MACRO_Public,    KC_CIRC,        KC_AMPR,        KC_ASTR,        PETKAU_MACRO_True,    PETKAU_MACRO_False,    KC_QUOTE,       
-    KC_LCBR,        RSFT(KC_Q),     RSFT(KC_W),     RSFT(KC_F),     RSFT(KC_P),     RSFT(KC_B),     PETKAU_MACRO_Continue,                                    PETKAU_MACRO_Private,    RSFT(KC_J),     RSFT(KC_L),     RSFT(KC_U),     RSFT(KC_Y),     KC_COLN,        KC_RCBR,        
-    KC_PLUS,        RSFT(KC_A),     RSFT(KC_R),     RSFT(KC_S),     RSFT(KC_T),     RSFT(KC_G),     PETKAU_MACRO_Static,                                                                    KC_CAPSLOCK,    RSFT(KC_M),     KC_TRANSPARENT, RSFT(KC_E),     RSFT(KC_I),     RSFT(KC_O),     KC_MINUS,       
-    KC_LABK,        RSFT(KC_Z),     RSFT(KC_X),     RSFT(KC_C),     RSFT(KC_D),     RSFT(KC_V),                                     RSFT(KC_K),     RSFT(KC_H),     KC_PIPE,        PETKAU_MACRO_DashArrow,    KC_QUES,        KC_RABK,        
-    PETKAU_MACRO_ReinterpretCast,    PETKAU_MACRO_Struct,    PETKAU_MACRO_Class,    PETKAU_MACRO_Namespace,    KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, RSFT(KC_DELETE),PETKAU_MACRO_Define,    PETKAU_MACRO_IfDef,    PETKAU_MACRO_Else,    PETKAU_MACRO_EndIf,    
-    PETKAU_MACRO_Auto,    PETKAU_MACRO_NullPtr,    RSFT(KC_TAB),                   RSFT(KC_TAB),   PETKAU_MACRO_Override,    PETKAU_MACRO_Return
   ),
 };
 
