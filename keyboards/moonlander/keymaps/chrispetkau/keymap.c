@@ -161,7 +161,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [3] = LAYOUT_moonlander(
     KC_NO,          KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          KC_NO,                                          RESET,          KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,         
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          LGUI(KC_L),     KC_NO,          KC_NO,          KC_NO,          KC_F12,         
-    KC_NO,          KC_NO,          KC_TRANSPARENT, KC_LCTRL,       KC_LSHIFT,      KC_NO,          KC_TRANSPARENT,                                                                 KC_WWW_REFRESH, KC_PGUP,        KC_HOME,        KC_UP,          KC_END,         KC_NO,          KC_NO,          
+    KC_NO,          KC_NO,          KC_TRANSPARENT, KC_LCTRL,       KC_LSHIFT,      KC_TRANSPARENT, KC_TRANSPARENT,                                                                 KC_WWW_REFRESH, KC_PGUP,        KC_HOME,        KC_UP,          KC_END,         KC_NO,          KC_NO,          
     KC_TRANSPARENT, LCTL(KC_Z),     LCTL(KC_X),     LCTL(KC_C),     LCTL(KC_V),     LCTL(KC_Y),                                     KC_PGDOWN,      KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_MEDIA_PLAY_PAUSE,KC_NO,          
     KC_TRANSPARENT, KC_NO,          KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_AUDIO_VOL_UP,KC_AUDIO_VOL_DOWN,KC_AUDIO_MUTE,  KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_NO,          KC_TRANSPARENT,                 KC_TRANSPARENT, KC_NO,          KC_TRANSPARENT
@@ -172,7 +172,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_PLUS,        LSFT(KC_A),     LSFT(KC_R),     LSFT(KC_S),     LSFT(KC_T),     LSFT(KC_G),     PETKAU_MACRO_Static,                                                                     KC_CAPSLOCK,    LSFT(KC_M),     LSFT(KC_N),     LSFT(KC_E),     LSFT(KC_I),     LSFT(KC_O),     KC_MINUS,       
     KC_LABK,        LSFT(KC_Z),     LSFT(KC_X),     LSFT(KC_C),     LSFT(KC_D),     LSFT(KC_V),                                     LSFT(KC_K),     LSFT(KC_H),     KC_PIPE,        PETKAU_MACRO_DashArrow,    KC_QUES,        KC_RABK,        
     PETKAU_MACRO_ReinterpretCast,     PETKAU_MACRO_Struct,    PETKAU_MACRO_Class,    PETKAU_MACRO_Namespace,    KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, LSFT(KC_DELETE),PETKAU_MACRO_Define,    PETKAU_MACRO_IfDef,    PETKAU_MACRO_Else,    PETKAU_MACRO_EndIf,    
-    PETKAU_MACRO_Auto,    PETKAU_MACRO_NullPtr,    LSFT(KC_TAB),                   LSFT(KC_TAB),   PETKAU_MACRO_Override,    PETKAU_MACRO_Return
+    KC_TRANSPARENT, PETKAU_MACRO_NullPtr,    LSFT(KC_TAB),                   LSFT(KC_TAB),   PETKAU_MACRO_Override,    PETKAU_MACRO_Return
   ),
 };
 
