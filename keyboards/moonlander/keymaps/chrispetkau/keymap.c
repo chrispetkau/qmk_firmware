@@ -140,7 +140,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_EQUAL,       KC_A,           LT(3,KC_R),     MT(MOD_LCTL, KC_S),LT(4,KC_T),     TD(DANCE_7),    KC_ENTER,                                                                       KC_TRANSPARENT, KC_M,           LT(4,KC_N),     MT(MOD_RCTL, KC_E),KC_I,           KC_O,           KC_UNDS,        
     MT(MOD_LSFT, KC_LBRACKET),TD(DANCE_8),    TD(DANCE_9),    TD(DANCE_10),   TD(DANCE_11),   TD(DANCE_12),                                   KC_K,           KC_H,           KC_COMMA,       KC_DOT,         TD(DANCE_21),   KC_RBRACKET,    
     TT(3),          PETKAU_MACRO_NotEqual,     KC_TRANSPARENT, RALT(KC_LCTRL), KC_BSPACE,      MT(MOD_LCTL, KC_ESCAPE),                                                                                                MT(MOD_RCTL, KC_ESCAPE),KC_DELETE,      KC_TRANSPARENT, PETKAU_MACRO_EqualsArrow,     KC_BSLASH,      TT(3),          
-    KC_SPACE,       MT(MOD_LALT, KC_TAB),LCTL(KC_LSHIFT),                LALT(KC_LSHIFT),MT(MOD_RALT, KC_TAB),KC_ENTER
+    KC_SPACE,       LCTL(KC_LSHIFT),MT(MOD_LALT, KC_TAB),                MT(MOD_RALT, KC_TAB),LALT(KC_LSHIFT),KC_ENTER
   ),
   [1] = LAYOUT_moonlander(
     KC_GRAVE,       KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_NO,                                          TD(DANCE_22),   KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_QUOTE,       
