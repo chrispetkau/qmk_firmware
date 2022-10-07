@@ -16,10 +16,14 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record)
   // Increase the tapping term on the hold-for-Ctrl.
   case KC_S:
   case KC_E:
-    return 250;    
+    return 250;
   // Really increase the tapping term on the hold-for-Select-All.
   case KC_A:
     return 350;
+  // Even more for the Alts on Space and Enter.
+  case KC_SPACE:
+  case KC_ENTER:
+    return 500;
   default:
     return TAPPING_TERM;
   }
