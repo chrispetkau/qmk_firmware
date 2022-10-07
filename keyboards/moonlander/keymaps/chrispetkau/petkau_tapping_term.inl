@@ -9,9 +9,14 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record)
   // case SFT_T(KC_MINS):
   // case SFT_T(KC_QUOTE):
   //   return 0;
-  // Reduce the tapping term on the hold-for-Shift-proxy-layers.
+  // Reduce the tapping term on the hold-for-layers.
   case KC_T:
   case KC_N:
+  case KC_R:
+  case KC_F:
+  case KC_U:
+  case KC_D:
+  case KC_H:
     return 150;
   // Increase the tapping term on the hold-for-Ctrl.
   case KC_S:
