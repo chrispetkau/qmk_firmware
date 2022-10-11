@@ -28,7 +28,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record)
   // Even more for the Alts on Space and Enter.
   case KC_SPACE:
   case KC_ENTER:
-    return 500;
+    return 1000;
   default:
     return TAPPING_TERM;
   }
