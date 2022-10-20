@@ -121,33 +121,8 @@ enum {
 #include "petkau_tapping_term.inl"
 #include "petkau_tap_dance.inl"
 
-enum custom_keycodes
-{
-	ST_MACRO_4,
-	ST_MACRO_5,
-	ST_MACRO_6
-};
-
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    case ST_MACRO_4:
-    if (record->event.pressed) {
-      SEND_STRING(SS_RSFT(SS_TAP(X_D)) SS_DELAY(100) SS_RSFT(SS_TAP(X_T)) SS_DELAY(100) SS_RSFT(SS_TAP(X_MINUS)) SS_DELAY(100) SS_RSFT(SS_TAP(X_U)) SS_DELAY(100) SS_RSFT(SS_TAP(X_P)));
-
-    }
-    break;
-    case ST_MACRO_5:
-    if (record->event.pressed) {
-      SEND_STRING(SS_RSFT(SS_TAP(X_D)) SS_DELAY(100) SS_RSFT(SS_TAP(X_T)) SS_DELAY(100) SS_RSFT(SS_TAP(X_MINUS)) SS_DELAY(100) SS_RSFT(SS_TAP(X_D)) SS_DELAY(100) SS_RSFT(SS_TAP(X_O)));
-
-    }
-    break;
-    case ST_MACRO_6:
-    if (record->event.pressed) {
-      SEND_STRING(SS_LSFT(SS_TAP(X_D)) SS_DELAY(100) SS_LSFT(SS_TAP(X_T)) SS_DELAY(100) SS_LSFT(SS_TAP(X_MINUS)) SS_DELAY(100) SS_LSFT(SS_TAP(X_P)) SS_DELAY(100) SS_LSFT(SS_TAP(X_R)));
-
-    }
-    break;
     default: return process_record_petkau(keycode, record);
   }
   return true;
@@ -179,8 +154,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [3] = LAYOUT_moonlander(
-    TO(0),          KC_NO,          TO(2),          KC_NO,          ST_MACRO_4,     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_6,     KC_AUDIO_VOL_UP,KC_AUDIO_MUTE,  KC_AUDIO_VOL_DOWN,KC_MEDIA_PLAY_PAUSE,
-    KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, ST_MACRO_5,     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_PGUP,        KC_HOME,        KC_UP,          KC_END,         KC_NO,          
+    TO(0),          KC_NO,          TO(2),          KC_NO,          DT_UP,     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, DT_PRNT,     KC_AUDIO_VOL_UP,KC_AUDIO_MUTE,  KC_AUDIO_VOL_DOWN,KC_MEDIA_PLAY_PAUSE,
+    KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, DT_DOWN,     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_PGUP,        KC_HOME,        KC_UP,          KC_END,         KC_NO,          
     RCTL(KC_Z),     RCTL(KC_X),     RCTL(KC_C),     TO(1),          RCTL(KC_V),     KC_TRANSPARENT, KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_PGDOWN,      KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_NO,          
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
