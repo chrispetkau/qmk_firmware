@@ -132,19 +132,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     case ST_MACRO_4:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_D) SS_DELAY(100) SS_TAP(X_T) SS_DELAY(100) SS_TAP(X_U) SS_DELAY(100) SS_TAP(X_P));
+      SEND_STRING(SS_RSFT(SS_TAP(X_D)) SS_DELAY(100) SS_RSFT(SS_TAP(X_T)) SS_DELAY(100) SS_RSFT(SS_TAP(X_MINUS)) SS_DELAY(100) SS_RSFT(SS_TAP(X_U)) SS_DELAY(100) SS_RSFT(SS_TAP(X_P)));
 
     }
     break;
     case ST_MACRO_5:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_D) SS_DELAY(100) SS_TAP(X_T) SS_DELAY(100) SS_TAP(X_D) SS_DELAY(100) SS_TAP(X_W) SS_DELAY(100) SS_TAP(X_N));
+      SEND_STRING(SS_RSFT(SS_TAP(X_D)) SS_DELAY(100) SS_RSFT(SS_TAP(X_T)) SS_DELAY(100) SS_RSFT(SS_TAP(X_MINUS)) SS_DELAY(100) SS_RSFT(SS_TAP(X_D)) SS_DELAY(100) SS_RSFT(SS_TAP(X_O)));
 
     }
     break;
     case ST_MACRO_6:
     if (record->event.pressed) {
-      SEND_STRING(SS_TAP(X_D) SS_DELAY(100) SS_TAP(X_T) SS_DELAY(100) SS_TAP(X_P) SS_DELAY(100) SS_TAP(X_R) SS_DELAY(100) SS_TAP(X_T));
+      SEND_STRING(SS_LSFT(SS_TAP(X_D)) SS_DELAY(100) SS_LSFT(SS_TAP(X_T)) SS_DELAY(100) SS_LSFT(SS_TAP(X_MINUS)) SS_DELAY(100) SS_LSFT(SS_TAP(X_P)) SS_DELAY(100) SS_LSFT(SS_TAP(X_R)));
 
     }
     break;
