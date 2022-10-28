@@ -1,4 +1,4 @@
-uint16_t get_tapping_term_offset(uint16_t keycode)
+int16_t get_tapping_term_offset(uint16_t keycode)
 {
   switch (keycode)
   {
@@ -14,13 +14,13 @@ uint16_t get_tapping_term_offset(uint16_t keycode)
   // Increase the tapping term on the hold-for-Ctrl.
   case KC_S:
   case KC_E:
-    return 850;
+    // return 850;
   default:
-    return 50;
+    return 0;
   }
 }
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record)
 {
-  return TAPPING_TERM + get_tapping_term_offset(keycode);
+  return (uint16_t)((int16_t)TAPPING_TERM + get_tapping_term_offset(keycode));
 }
