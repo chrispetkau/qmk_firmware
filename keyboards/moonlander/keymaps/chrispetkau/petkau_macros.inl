@@ -36,9 +36,8 @@ enum petkau_keycodes
 
 #define PETKAU_DELAY SS_DELAY(0)
 
-bool process_record_petkau(uint16_t keycode, keyrecord_t *record)
+bool process_record_macros(uint16_t keycode, keyrecord_t *record)
 {
-	if (!record->event.pressed) return true;
 	switch (keycode)
 	{
 	case PETKAU_MACRO_Void: SEND_STRING(SS_TAP(X_V) PETKAU_DELAY SS_TAP(X_O) PETKAU_DELAY SS_TAP(X_I) PETKAU_DELAY SS_TAP(X_D)); break;
@@ -72,7 +71,7 @@ bool process_record_petkau(uint16_t keycode, keyrecord_t *record)
 	case PETKAU_MACRO_While: SEND_STRING(SS_TAP(X_W) PETKAU_DELAY SS_TAP(X_H) PETKAU_DELAY SS_TAP(X_I) PETKAU_DELAY SS_TAP(X_L) PETKAU_DELAY SS_TAP(X_E)); break;
 	case PETKAU_MACRO_ReinterpretCast: SEND_STRING(SS_TAP(X_R) PETKAU_DELAY SS_TAP(X_E) PETKAU_DELAY SS_TAP(X_I) PETKAU_DELAY SS_TAP(X_N) PETKAU_DELAY SS_TAP(X_T) PETKAU_DELAY SS_TAP(X_E) PETKAU_DELAY SS_TAP(X_R) PETKAU_DELAY SS_TAP(X_P) PETKAU_DELAY SS_TAP(X_R) PETKAU_DELAY SS_TAP(X_E) PETKAU_DELAY SS_TAP(X_T) PETKAU_DELAY SS_LSFT(SS_TAP(X_MINUS)) PETKAU_DELAY SS_TAP(X_C) PETKAU_DELAY SS_TAP(X_A) PETKAU_DELAY SS_TAP(X_S) PETKAU_DELAY SS_TAP(X_T)); break;
 	case PETKAU_MACRO_Function: SEND_STRING(SS_TAP(X_F) PETKAU_DELAY SS_TAP(X_U) PETKAU_DELAY SS_TAP(X_N) PETKAU_DELAY SS_TAP(X_C) PETKAU_DELAY SS_TAP(X_T) PETKAU_DELAY SS_TAP(X_I) PETKAU_DELAY SS_TAP(X_O) PETKAU_DELAY SS_TAP(X_N)); break;
-	case RGB_SLD: rgblight_mode(1); return false;
+	default: return false;
 	}
 	return true;
 };
