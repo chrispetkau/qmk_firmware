@@ -146,7 +146,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
-    LT(6,KC_Q),     KC_W,           LT(5,KC_F),     LT(2,KC_P),     KC_B,           KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCOLON,      
+    LT(6,KC_Q),     KC_W,           LT(4,KC_F),     LT(2,KC_P),     KC_B,           KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCOLON,      
     KC_A,           LT(5,KC_R),     MT(MOD_LCTL, KC_S),MT(MOD_LSFT, KC_T),KC_G,           KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_M,           MT(MOD_RSFT, KC_N),MT(MOD_RCTL, KC_E),KC_I,           KC_O,           
     TD(DANCE_0),    TD(DANCE_1),    TD(DANCE_2),    LT(1,KC_D),     TD(DANCE_3),    KC_TRANSPARENT, KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_K,           LT(1,KC_H),     KC_COMMA,       KC_DOT,         KC_SLASH,       
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_BSPACE,      KC_SPACE,       KC_LALT,                                        KC_RALT,        KC_ENTER,       KC_DELETE,      KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
@@ -195,7 +195,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [6] = LAYOUT_moonlander(
     KC_TRANSPARENT, KC_NO,          KC_NO,          TO(2),          DT_UP,     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, RESET,          LGUI(KC_L),     TO(4),          KC_NO,          TO(3),          
-    KC_NO,          KC_NO,          KC_NO,          KC_NO,          DT_DOWN,     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_PSCREEN,     TO(0),          KC_NO,          TO(3),          KC_NO,          
+    KC_NO,          KC_NO,          KC_NO,          KC_NO,          DT_DOWN,     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_PSCREEN,     TO(0),          KC_NO,          TO(5),          KC_NO,          
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          DT_PRNT,     KC_TRANSPARENT, KC_TRANSPARENT,                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,          TO(1),          KC_NO,          KC_NO,          KC_NO,          
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
