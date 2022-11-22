@@ -136,15 +136,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
-    TD(DANCE_0),    TD(DANCE_1),    TD(DANCE_2),    TD(DANCE_3),    TD(DANCE_4),    TD(DANCE_5),    PETKAU_MACRO_Void,                                     KC_PSCREEN,     TD(DANCE_14),   TD(DANCE_15),   TD(DANCE_16),   TD(DANCE_17),   TD(DANCE_18),   TD(DANCE_19),   
-    KC_LPRN,        KC_Q,           KC_W,           KC_F,           TD(DANCE_6),    KC_B,           PETKAU_MACRO_Break,                                     TD(DANCE_20),   KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCOLON,      TD(DANCE_21),   
-    KC_EQUAL,       TD(DANCE_7),    LT(3,KC_R),     MT(MOD_LCTL, KC_S),LT(4,KC_T),     TD(DANCE_8),    KC_ENTER,                                                                       KC_TRANSPARENT, KC_M,           LT(4,KC_N),     MT(MOD_RCTL, KC_E),KC_I,           KC_O,           KC_UNDS,        
-    MT(MOD_LSFT, KC_LBRACKET),TD(DANCE_9),    TD(DANCE_10),   TD(DANCE_11),   TD(DANCE_12),   TD(DANCE_13),                                   KC_K,           KC_H,           KC_COMMA,       TD(DANCE_22),   TD(DANCE_23),   KC_RBRACKET,    
+    TD(DANCE_0),    TD(DANCE_1),    TD(DANCE_2),    TD(DANCE_3),    TD(DANCE_4),    TD(DANCE_5),    PETKAU_MACRO_Void,                                     KC_PSCREEN,     TD(DANCE_13),   TD(DANCE_14),   TD(DANCE_15),   TD(DANCE_16),   TD(DANCE_17),   TD(DANCE_18),   
+    KC_LPRN,        KC_Q,           KC_W,           KC_F,           TD(DANCE_6),    KC_B,           PETKAU_MACRO_Break,                                     TD(DANCE_19),   KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCOLON,      TD(DANCE_20),   
+    KC_EQUAL,       KC_A,           LT(3,KC_R),     MT(MOD_LCTL, KC_S),LT(4,KC_T),     TD(DANCE_7),    KC_ENTER,                                                                       KC_TRANSPARENT, KC_M,           LT(4,KC_N),     MT(MOD_RCTL, KC_E),KC_I,           KC_O,           KC_UNDS,        
+    MT(MOD_LSFT, KC_LBRACKET),TD(DANCE_8),    TD(DANCE_9),    TD(DANCE_10),   TD(DANCE_11),   TD(DANCE_12),                                   KC_K,           KC_H,           KC_COMMA,       TD(DANCE_21),   TD(DANCE_22),   KC_RBRACKET,    
     TT(3),          PETKAU_MACRO_NotEqual,     KC_TRANSPARENT, RALT(KC_LCTRL), KC_BSPACE,      MT(MOD_LCTL, KC_ESCAPE),                                                                                                MT(MOD_RCTL, KC_ESCAPE),KC_DELETE,      KC_TRANSPARENT, PETKAU_MACRO_EqualsArrow,     KC_BSLASH,      TT(3),          
     KC_SPACE,       LCTL(KC_LSHIFT),MT(MOD_LALT, KC_TAB),                MT(MOD_RALT, KC_TAB),LALT(KC_LSHIFT),KC_ENTER
   ),
   [1] = LAYOUT_moonlander(
-    KC_GRAVE,       KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_NO,                                          TD(DANCE_24),   KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_QUOTE,       
+    KC_GRAVE,       KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_NO,                                          TD(DANCE_23),   KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_QUOTE,       
     KC_TAB,         KC_TRANSPARENT, KC_TRANSPARENT, KC_E,           KC_R,           KC_T,           KC_NO,                                          KC_TRANSPARENT, KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_MINUS,       
     KC_LSHIFT,      KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           KC_TRANSPARENT,                                                                 KC_NO,          KC_H,           KC_J,           KC_K,           KC_L,           KC_SCOLON,      KC_RSHIFT,      
     KC_LCTRL,       KC_Z,           KC_X,           KC_C,           KC_V,           KC_B,                                           KC_N,           KC_M,           KC_TRANSPARENT, KC_TRANSPARENT, KC_SLASH,       KC_RCTRL,       
@@ -152,7 +152,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_SPACE,       KC_NO,          KC_TRANSPARENT,                 KC_TRANSPARENT, KC_NO,          KC_TRANSPARENT
   ),
   [2] = LAYOUT_moonlander(
-    KC_GRAVE,       KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_NO,                                          TD(DANCE_25),   KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_QUOTE,       
+    KC_GRAVE,       KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_NO,                                          TD(DANCE_24),   KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_QUOTE,       
     KC_TAB,         KC_Q,           KC_W,           KC_F,           KC_P,           KC_B,           KC_NO,                                          KC_TRANSPARENT, KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCOLON,      KC_MINUS,       
     KC_LSHIFT,      KC_A,           KC_R,           KC_S,           KC_T,           KC_G,           KC_TRANSPARENT,                                                                 KC_NO,          KC_M,           KC_N,           KC_E,           KC_I,           KC_O,           KC_RSHIFT,      
     KC_LCTRL,       KC_Z,           KC_X,           KC_C,           KC_D,           KC_V,                                           KC_K,           KC_H,           KC_TRANSPARENT, KC_TRANSPARENT, KC_SLASH,       KC_RCTRL,       
