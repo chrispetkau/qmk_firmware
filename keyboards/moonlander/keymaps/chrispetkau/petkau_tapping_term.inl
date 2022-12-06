@@ -5,6 +5,7 @@ int16_t get_tapping_term_offset(uint16_t keycode)
   // Reduce the tapping term on the hold-for-layers.
   case KC_T:
   case KC_N:
+    return -50;
   case KC_R:
   case KC_F:
   case KC_U:
