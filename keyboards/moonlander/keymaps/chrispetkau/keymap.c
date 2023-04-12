@@ -88,6 +88,9 @@ void set_layer_color(int layer) {
 }
 
 void rgb_matrix_indicators_user(void) {
+  if (rawhid_state.rgb_control) {
+      return;
+  }
   if (keyboard_config.disable_layer_led) { return; }
   switch (biton32(layer_state)) {
     case 0:
@@ -115,30 +118,30 @@ void rgb_matrix_indicators_user(void) {
   }
 }
 
-typedef struct {
-    bool is_press_action;
-    uint8_t step;
-} tap;
-
-enum {
-    SINGLE_TAP = 1,
-    SINGLE_HOLD,
-    DOUBLE_TAP,
-    DOUBLE_HOLD,
-    DOUBLE_SINGLE_TAP,
-    MORE_TAPS
-};
-
 #include "petkau_tapping_term.inl"
 #include "petkau_tap_dance.inl"
 #include "process_record_petkau.inl"
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
+    case TD(DANCE_2):
+    case TD(DANCE_3):
+    case TD(DANCE_4):
+    case TD(DANCE_5):
+    case TD(DANCE_7):
+    case TD(DANCE_8):
+    case TD(DANCE_9):
+        action = &tap_dance_actions[TD_INDEX(keycode)];
+        if (!record->event.pressed && action->state.count && !action->state.finished) {
+            tap_dance_tap_hold_t *tap_hold = (tap_dance_tap_hold_t *)action->user_data;
+            tap_code16(tap_hold->tap);
+        }
+        break;
     default: return process_record_petkau(keycode, record);
   }
   return true;
 }
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
@@ -147,7 +150,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_EQUAL,       KC_A,           LT(3,KC_R),     KC_S,           LT(4,KC_T),     TD(DANCE_1),    KC_ENTER,                                                                       KC_NO,          KC_M,           LT(4,KC_N),     KC_E,           KC_I,           KC_O,           KC_UNDS,        
     KC_LSHIFT,      TD(DANCE_2),    TD(DANCE_3),    TD(DANCE_4),    LT(5,KC_D),     TD(DANCE_5),                                    KC_K,           LT(5,KC_H),     KC_COMMA,       TD(DANCE_8),    TD(DANCE_9),    KC_NO,          
     TT(3),          KC_NO,          KC_NO,          RALT(KC_LCTRL), KC_BSPACE,      MT(MOD_LCTL, KC_ESCAPE),                                                                                                MT(MOD_RCTL, KC_ESCAPE),KC_DELETE,      KC_NO,          KC_NO,          KC_NO,          TT(3),          
-    KC_SPACE,       LCTL(KC_LSHIFT),MT(MOD_LALT, KC_TAB),                KC_RALT,        LALT(KC_LSHIFT),KC_ENTER
+    KC_SPACE,       LCTL(KC_LSHIFT),MT(MOD_LALT, KC_TAB),                MT(MOD_RALT, KC_TAB),LALT(KC_LSHIFT),KC_ENTER
   ),
   [1] = LAYOUT_moonlander(
     KC_GRAVE,       KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_EQUAL,                                       TD(DANCE_10),   KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_QUOTE,       
@@ -179,7 +182,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_PLUS,        LSFT(KC_A),     LSFT(KC_R),     LSFT(KC_S),     LSFT(KC_T),     LSFT(KC_G),     KC_TRANSPARENT,                                                                 KC_CAPSLOCK,    LSFT(KC_M),     LSFT(KC_N),     LSFT(KC_E),     LSFT(KC_I),     LSFT(KC_O),     KC_MINUS,       
     KC_TRANSPARENT, LSFT(KC_Z),     LSFT(KC_X),     LSFT(KC_C),     LSFT(KC_D),     LSFT(KC_V),                                     LSFT(KC_K),     LSFT(KC_H),     KC_PIPE,        PETKAU_MACRO_DashArrow,     KC_QUES,        KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, LSFT(KC_DELETE),KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, RSFT(KC_TAB),                   KC_TRANSPARENT, KC_TRANSPARENT, PETKAU_MACRO_Return
+    KC_TRANSPARENT, KC_TRANSPARENT, RSFT(KC_TAB),                   RSFT(KC_TAB),   KC_TRANSPARENT, PETKAU_MACRO_Return
   ),
   [5] = LAYOUT_moonlander(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 

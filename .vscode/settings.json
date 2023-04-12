@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "chrispetkau.inl": "c",
-        "petkau_tap_dance.inl": "c"
+        "petkau_tap_dance.inl": "c",
+        "petkau_macros.inl": "c"
     }
 }
