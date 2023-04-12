@@ -2,7 +2,7 @@ int16_t get_tapping_term_offset(uint16_t keycode)
 {
   switch (keycode)
   {
-  // Reduce the tapping term on the hold-for-layers.
+  // Reduce the tapping term on the hold-for-Shift.
   case KC_T:
   case KC_N:
     return -50;
