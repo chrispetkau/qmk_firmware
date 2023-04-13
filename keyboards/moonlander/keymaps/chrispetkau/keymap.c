@@ -118,25 +118,26 @@ void rgb_matrix_indicators_user(void) {
   }
 }
 
+typedef struct {
+    bool is_press_action;
+    uint8_t step;
+} tap;
+
+enum {
+    SINGLE_TAP = 1,
+    SINGLE_HOLD,
+    DOUBLE_TAP,
+    DOUBLE_HOLD,
+    DOUBLE_SINGLE_TAP,
+    MORE_TAPS
+};
+
 #include "petkau_tapping_term.inl"
 #include "petkau_tap_dance.inl"
 #include "process_record_petkau.inl"
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    case TD(DANCE_2):
-    case TD(DANCE_3):
-    case TD(DANCE_4):
-    case TD(DANCE_5):
-    case TD(DANCE_7):
-    case TD(DANCE_8):
-    case TD(DANCE_9):
-        action = &tap_dance_actions[TD_INDEX(keycode)];
-        if (!record->event.pressed && action->state.count && !action->state.finished) {
-            tap_dance_tap_hold_t *tap_hold = (tap_dance_tap_hold_t *)action->user_data;
-            tap_code16(tap_hold->tap);
-        }
-        break;
     default: return process_record_petkau(keycode, record);
   }
   return true;
@@ -193,6 +194,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
 };
+
 
 
 extern rgb_config_t rgb_matrix_config;

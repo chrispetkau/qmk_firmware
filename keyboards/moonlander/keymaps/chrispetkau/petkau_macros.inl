@@ -34,7 +34,7 @@ enum petkau_keycodes
 	PETKAU_MACRO_Function,
 };
 
-#define PETKAU_DELAY SS_DELAY(100)
+#define PETKAU_DELAY SS_DELAY(0)
 
 bool process_record_macros(uint16_t keycode, keyrecord_t *record)
 {
