@@ -34,7 +34,7 @@
 // }
 
 bool process_record_petkau(uint16_t keycode, keyrecord_t *record) {
-    if(process_record_macros(keycode, record)) return true;
+    if(record->event.pressed && process_record_macros(keycode, record)) return true;
 
     switch (keycode) {
         // TODO
