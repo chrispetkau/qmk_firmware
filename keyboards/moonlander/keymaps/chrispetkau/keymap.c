@@ -156,6 +156,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 };
 
+const uint16_t PROGMEM combo0[] = { KC_TAB, KC_A, COMBO_END};
+const uint16_t PROGMEM combo1[] = { KC_ESCAPE, KC_O, COMBO_END};
+
+combo_t key_combos[COMBO_COUNT] = {
+    COMBO(combo0, TG(1)),
+    COMBO(combo1, TG(1)),
+};
 
 
 extern rgb_config_t rgb_matrix_config;
