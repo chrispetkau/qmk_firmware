@@ -1,1 +1,4 @@
 #define TAPPING_TERM_PER_KEY
+#define TAPPING_TERM 200
+#define QUICK_TAP_TERM 0
+#define TAPPING_TOGGLE 1
